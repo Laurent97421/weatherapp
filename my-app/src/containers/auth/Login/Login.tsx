@@ -1,14 +1,17 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { useForm } from 'react-hook-form';
 import { useNavigate } from "react-router";
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import { Container, CssBaseline, Box, Avatar, Typography, TextField, FormControlLabel, Checkbox, Button, Grid, Link, Alert } from '@mui/material';
 import Copyright from '../../../components/copyright/copyright';
+import { UserContext } from '../../../contexts/user';
 
 
 const Login = () => {
 
     const navigate = useNavigate();
+
+    const { setEmail }: any = useContext(UserContext);
 
     const [mail, setMail] = useState<string>();
     const [password, setPassword] = useState<string>();
@@ -18,6 +21,9 @@ const Login = () => {
 
     const onSubmit = async (data: any) => {
         console.log(data);
+        console.log(mail);
+        
+        setEmail(mail);
         const userExist = await fetch("http://localhost:3001/auth/signin", {
             method: 'POST',
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -25,11 +31,9 @@ const Login = () => {
         });
 
         const body = await userExist.json();
-        console.log(body);
 
 
         if (body.success === true) {
-            console.log('true');
             navigate('/weather');
         } else {
             console.log('false');
