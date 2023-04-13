@@ -28,11 +28,7 @@ const Leaflet = ({ cities }: LeafletProps) => {
             {cities.map((city) => (
                 <Marker position={[city.lat, city.lon]} key={city._id}>
                     <Popup>
-                        A pretty CSS3 popup. <br /> Easily customizable.
-                        <div>
-                            <h2>{city.name}</h2>
-                            <p>dz</p>
-                        </div>
+                        <h2>{city.name}</h2>
                     </Popup>
                 </Marker>
             ))}
