@@ -40,7 +40,7 @@ const Profile = () => {
                                     Leonardo Watch
                                 </Typography>
                                 <Typography variant="button" color="text" fontWeight="regular">
-                                    CTO / Co-Founder
+                                    Humain
                                 </Typography>
                             </Box>
                         </Grid>
@@ -60,7 +60,7 @@ const Profile = () => {
                         minHeight="2.75rem"
                     >
                         <Typography >
-                            <strong>Fullname:</strong> Leonardo Watch
+                            <strong>Fullname:</strong> ELeonardo Watch
                         </Typography>
                     </Box>
                     <Box
