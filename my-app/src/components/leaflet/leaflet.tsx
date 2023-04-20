@@ -20,7 +20,7 @@ interface LeafletProps {
 const Leaflet = ({ cities }: LeafletProps) => {
 
     return (
-        <MapContainer center={[48.866667, 2.333333]} zoom={4} scrollWheelZoom={false} style={{ width: '500px', height: '500px' }}>
+        <MapContainer center={[48.866667, 2.333333]} zoom={4} scrollWheelZoom={false} style={{ width: '900px', height: '2000px' }}>
             <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

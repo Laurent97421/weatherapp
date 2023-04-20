@@ -22,7 +22,7 @@ const Login = () => {
     const onSubmit = async (data: any) => {
         console.log(data);
         console.log(mail);
-        
+
         setEmail(mail);
         const userExist = await fetch("http://localhost:3001/auth/signin", {
             method: 'POST',
@@ -42,23 +42,6 @@ const Login = () => {
     }
 
     return (
-        // <div className='row'>
-        //     <form onSubmit={handleSubmit(onSubmit)}>
-        //         <div className='form-group'>
-        //             <label>Email :</label>
-        //             <input type="email" autoComplete='off' {...register("email", { required: true })}  onChange={(e: any) => setMail(e.target.value)}/>
-        //             {errors.email && <p style={{ color: 'red', paddingLeft: '2em' }}>Email is required</p>}
-        //         </div>
-        //         <div className='form-group'>
-        //             <label>Password :</label>
-        //             <input type="password" autoComplete='off' {...register("password", { required: true })}  onChange={(e: any) => setPassword(e.target.value)}/>
-        //             {errors.password && <p style={{ color: 'red', paddingLeft: '2em' }}>Password is required</p>}
-        //         </div>
-        //         {errorMsg && <p style={{ color: 'red', paddingLeft: '2em' }}>{errorMsg}</p>}
-        //         <button type='submit'>Se connecter</button>
-        //         <button onClick={() => navigate('/')}>Créer un compte</button>
-        //     </form>
-        // </div>
         <Container>
             <CssBaseline />
             <Box
